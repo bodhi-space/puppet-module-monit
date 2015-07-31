@@ -40,7 +40,7 @@ class monit::config {
   }
 
   # Additional checks.
-  $checks = hiera_array($monit::checks)
+  $checks = hiera_array($monit::checks, [])
   validate_array($monit::checks)
   file { "${monit::conf_dir}/10_checks_config":
     ensure  => present,
