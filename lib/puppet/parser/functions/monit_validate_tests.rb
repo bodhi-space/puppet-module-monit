@@ -30,10 +30,8 @@ module Puppet::Parser::Functions
     defined?(TEST_TYPES) or TEST_TYPES = {
       'DIRECTORY'   => [],
       'FIFO'        => [],
-      'FILE'        => [],
-      'FILESYSTEM'  => [
-        'FSFLAGS', 'SPACE', 'INODE', 'PERM', 'PERMISSION'
-      ],
+      'FILE'        => ['CHECKSUM', 'TIMESTAMP', 'SIZE', 'MATCH', 'NOT MATCH', 'IGNORE', 'PERM', 'UID', 'GID'],
+      'FILESYSTEM'  => ['FSFLAGS', 'SPACE', 'INODE', 'PERM', 'PERMISSION'],
       'HOST'        => ['CONNECTION'],
       'PROCESS'     => RESOURCE_TESTS + ['CONNECTION',],
       'PROGRAM'     => [],
