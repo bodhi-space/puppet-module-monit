@@ -59,7 +59,7 @@ class monit(
   $system_fs_space_usage   = '80%',
   $system_fs_inode_usage   = '80%',
   # Additional checks.
-  $checks                  = {},
+  $checks                  = [],
 ) inherits monit::params {
 
   class{'monit::install': } ->
