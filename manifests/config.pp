@@ -40,8 +40,8 @@ class monit::config {
   }
 
   # Additional checks.
-  $checks_merged = hiera_array($monit::checks)
-  validate_array($monit::checks)
+  $checks_merged = hiera_array('monit::checks')
+  validate_array($checks_merged)
   file { "${monit::conf_dir}/10_checks_config":
     ensure  => present,
     content => template('monit/10_checks_config.erb'),
