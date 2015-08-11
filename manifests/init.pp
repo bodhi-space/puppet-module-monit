@@ -14,6 +14,7 @@
 #   Monit doc reference: http://mmonit.com/monit/documentation/monit.html#setting_an_alert_recipient
 #
 class monit(
+  $version                 = $monit::params::version,
   $service_enable          = true,
   $service_ensure          = running,
   $conf_file               = $monit::params::conf_file,

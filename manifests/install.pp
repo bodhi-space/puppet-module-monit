@@ -5,7 +5,7 @@ class monit::install {
   }
 
   package { $monit::package:
-    ensure => present,
+    ensure => $monit::version,
   }
 }
 

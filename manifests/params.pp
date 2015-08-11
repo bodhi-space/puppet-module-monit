@@ -7,6 +7,7 @@ class monit::params {
 
   $package = 'monit'
   $service = 'monit'
+  $version = 'present'
 
   $check_interval    = 120
   $check_start_delay = 240
